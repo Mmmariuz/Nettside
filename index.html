@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>IT Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo">IT.Portfolio</div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#certificates">Certs</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-grid-bg"></div>
+    <div class="hero-glow"></div>
+    <div class="hero-content">
+      <div class="hero-tag">Available for opportunities</div>
+      <h1>IT<br><span>Technician</span></h1>
+      <p class="hero-sub">
+        Diagnosing hardware failures, building networks, and solving complex technical problems — keeping systems running smoothly so teams can focus on what matters.
+      </p>
+      <div class="hero-ctas">
+        <a href="#projects" class="btn btn-primary">View My Work</a>
+        <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="section-label">About</div>
+    <div class="about-layout">
+      <div class="about-left fade-up">
+        <div class="avatar-box">
+          <div class="avatar-placeholder"> <img src="bilder/meg.png"> </div>
+        </div>
+        <div class="about-name">Marius Hauge</div>
+        <div class="about-title">IT Technician</div>
+      </div>
+      <div class="about-right fade-up">
+        <h2>Who I Am</h2>
+        <p>
+          I'm a dedicated IT Technician with hands-on experience supporting end-users, maintaining infrastructure, and deploying enterprise solutions. My focus is on delivering reliable, efficient technical support that minimizes downtime and maximizes productivity.
+        </p>
+        <p>
+          From configuring Active Directory environments to troubleshooting complex network issues, I thrive in fast-paced environments where every problem is a puzzle waiting to be solved.
+        </p>
+        <p>
+          When I'm not fixing machines, I'm studying for certifications or building home-lab setups to test emerging technologies before they hit the enterprise.
+        </p>
+        <div class="skills-grid">
+          <span class="skill-tag">Windows Server</span>
+          <span class="skill-tag">Active Directory</span>
+          <span class="skill-tag">TCP/IP Networking</span>
+          <span class="skill-tag">Hardware Repair</span>
+          <span class="skill-tag">PowerShell</span>
+          <span class="skill-tag">VMware / Hyper-V</span>
+          <span class="skill-tag">Azure AD</span>
+          <span class="skill-tag">Office 365</span>
+          <span class="skill-tag">Linux</span>
+          <span class="skill-tag">Helpdesk Support</span>
+          <span class="skill-tag">ITIL</span>
+          <span class="skill-tag">Cisco Networking</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="section-label">Projects</div>
+    <h2>What I've Built</h2>
+    <div class="projects-grid">
+
+      <!-- <div class="project-card fade-up">
+        <div class="project-icon">🖧</div>
+        <h3>Office Network Overhaul</h3>
+        <p>Redesigned and deployed a complete network infrastructure for a 50-person office, including VLAN segmentation, managed switches, and a pfSense firewall — reducing latency by 40%.</p>
+        <div class="project-tags">
+          <span class="project-tag">Networking</span>
+          <span class="project-tag">pfSense</span>
+          <span class="project-tag">VLANs</span>
+        </div>
+      </div> -->
+
+      <!-- <div class="project-card fade-up">
+        <div class="project-icon">🖥️</div>
+        <h3>Windows Server Migration</h3>
+        <p>Migrated an on-premise Windows Server 2012 environment to Windows Server 2022, including Active Directory, Group Policy, and DNS/DHCP services with zero data loss.</p>
+        <div class="project-tags">
+          <span class="project-tag">Windows Server</span>
+          <span class="project-tag">Active Directory</span>
+          <span class="project-tag">Migration</span>
+        </div>
+      </div> -->
+
+      <!-- <div class="project-card fade-up">
+        <div class="project-icon">☁️</div>
+        <h3>Azure AD Hybrid Setup</h3>
+        <p>Implemented a hybrid Azure Active Directory environment syncing on-prem accounts to the cloud, enabling SSO and conditional access policies for remote workers.</p>
+        <div class="project-tags">
+          <span class="project-tag">Azure AD</span>
+          <span class="project-tag">Hybrid Cloud</span>
+          <span class="project-tag">SSO</span>
+        </div>
+      </div> -->
+
+      <!-- <div class="project-card fade-up">
+        <div class="project-icon">🔒</div>
+        <h3>Endpoint Security Rollout</h3>
+        <p>Deployed and configured Microsoft Defender for Endpoint across 200+ devices, created automated remediation playbooks and integrated with SIEM for centralized monitoring.</p>
+        <div class="project-tags">
+          <span class="project-tag">Security</span>
+          <span class="project-tag">Defender</span>
+          <span class="project-tag">SIEM</span>
+        </div>
+      </div> -->
+
+     <!-- <div class="project-card fade-up">
+        <div class="project-icon">⚙️</div>
+        <h3>PowerShell Automation Scripts</h3>
+        <p>Built a suite of PowerShell scripts for automating user provisioning/deprovisioning, PC imaging, patch reporting, and disk cleanup — saving ~8 hours of manual work weekly.</p>
+        <div class="project-tags">
+          <span class="project-tag">PowerShell</span>
+          <span class="project-tag">Automation</span>
+          <span class="project-tag">Scripting</span>
+        </div>
+      </div> -->
+
+     <!-- <div class="project-card fade-up">
+        <div class="project-icon">🏠</div>
+        <h3>Home Lab Environment</h3>
+        <p>Built a personal home lab with Proxmox virtualisation hosting multiple VMs including pfSense, Windows Server, and various Linux distros for hands-on learning and testing.</p>
+        <div class="project-tags">
+          <span class="project-tag">Proxmox</span>
+          <span class="project-tag">Virtualisation</span>
+          <span class="project-tag">Linux</span>
+        </div>
+      </div> -->
+
+    </div>
+  </section>
+
+  <!-- CERTIFICATES -->
+  <section id="certificates">
+    <div class="section-label">Certifications</div>
+    <h2>Credentials</h2>
+    <div class="certs-grid">
+
+      <!-- <div class="cert-card fade-up">
+        <div class="cert-badge">🏆</div>
+        <div class="cert-info">
+          <h3>CompTIA A+</h3>
+          <div class="cert-issuer">CompTIA</div>
+          <div class="cert-year">2022</div>
+        </div>
+      </div> -->
+
+      <!-- <div class="cert-card fade-up">
+        <div class="cert-badge">🌐</div>
+        <div class="cert-info">
+          <h3>CompTIA Network+</h3>
+          <div class="cert-issuer">CompTIA</div>
+          <div class="cert-year">2022</div>
+        </div>
+      </div> -->
+
+      <!-- <div class="cert-card fade-up">
+        <div class="cert-badge">🔐</div>
+        <div class="cert-info">
+          <h3>CompTIA Security+</h3>
+          <div class="cert-issuer">CompTIA</div>
+          <div class="cert-year">2023</div>
+        </div> 
+      </div> -->
+
+      <div class="cert-card fade-up">
+        <div class="cert-badge">☁️</div>
+        <div class="cert-info">
+          <h3>Microsoft MS-900</h3>
+          <div class="cert-issuer">Microsoft</div>
+          <div class="cert-year">2026</div>
+        </div>
+      </div>
+
+      <!-- <div class="cert-card fade-up">
+        <div class="cert-badge">🖥️</div>
+        <div class="cert-info">
+          <h3>Microsoft MD-102</h3>
+          <div class="cert-issuer">Microsoft</div>
+          <div class="cert-year">2024</div>
+        </div>
+      </div> -->
+
+     <!-- <div class="cert-card fade-up">
+        <div class="cert-badge">📋</div>
+        <div class="cert-info">
+          <h3>ITIL 4 Foundation</h3>
+          <div class="cert-issuer">Axelos</div>
+          <div class="cert-year">2023</div>
+        </div>
+      </div> -->
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="section-label" style="justify-content:center">Contact</div>
+    <h2>Let's Connect</h2>
+    <p class="contact-sub">
+      Open to new opportunities, collaborations, or just a conversation about tech. Reach out and I'll get back to you promptly.
+    </p>
+    <div class="contact-links">
+      <a href="mailto:mariushauge.93@gmail.com" class="btn btn-primary">✉ Email Me</a>
+      <a href="https://www.linkedin.com/in/marius-hauge-39513a236/" target="_blank" class="btn btn-ghost">LinkedIn</a>
+      <a href="https://github.com" target="_blank" class="btn btn-ghost">GitHub</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <span>© 2026 Marius Hauge · IT Technician</span>
+    <span style="color: var(--border)">Built with precision</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
