@@ -307,6 +307,79 @@ h2 {
 .cert-issuer { color: var(--accent); font-size: 0.75rem; letter-spacing: 0.08em; margin-bottom: 6px; }
 .cert-year { color: var(--muted); font-size: 0.75rem; }
 
+/* GOALS */
+#goals {}
+.goals-years { display: flex; flex-direction: column; gap: 64px; }
+
+.goals-year-header {
+  display: flex; align-items: center; gap: 20px;
+  margin-bottom: 28px;
+}
+.goals-year-badge {
+  font-family: var(--font-head);
+  font-size: 1.8rem; font-weight: 800;
+  color: var(--accent);
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+}
+.goals-year-badge--future { color: var(--muted); }
+.goals-year-line {
+  flex: 1; height: 1px;
+  background: linear-gradient(90deg, var(--border), transparent);
+}
+
+.goals-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.goal-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 26px 26px 26px 20px;
+  display: flex; gap: 16px; align-items: flex-start;
+  position: relative; overflow: hidden;
+  transition: border-color 0.3s, transform 0.3s;
+}
+.goal-card:hover { border-color: rgba(0,229,255,0.3); transform: translateY(-3px); }
+.goal-card--future { opacity: 0.65; }
+.goal-card--future:hover { opacity: 1; border-color: rgba(124,58,237,0.4); }
+
+.goal-status {
+  min-width: 10px; height: 10px;
+  border-radius: 50%;
+  margin-top: 6px;
+}
+.goal-status--in-progress {
+  background: var(--accent);
+  box-shadow: 0 0 8px rgba(0,229,255,0.6);
+  animation: pulse 2s infinite;
+}
+.goal-status--planned {
+  background: transparent;
+  border: 2px solid var(--accent);
+}
+.goal-status--future {
+  background: transparent;
+  border: 2px solid var(--muted);
+}
+
+.goal-body { flex: 1; }
+.goal-category {
+  font-size: 0.68rem; letter-spacing: 0.15em;
+  text-transform: uppercase; color: var(--accent);
+  margin-bottom: 6px;
+}
+.goal-card--future .goal-category { color: var(--accent2); }
+.goal-card h3 {
+  font-family: var(--font-head);
+  font-size: 1rem; font-weight: 700;
+  margin-bottom: 8px;
+}
+.goal-card p { color: var(--muted); font-size: 0.85rem; line-height: 1.6; }
+
+
 /* CONTACT */
 #contact { text-align: center; }
 #contact h2 { margin-bottom: 16px; }
