@@ -230,6 +230,21 @@ h2 {
 }
 .skill-tag:hover { border-color: var(--accent); color: var(--accent); }
 
+/* SKILL GROUPS */
+.skills-groups {
+  display: flex; flex-direction: column; gap: 28px;
+  margin-top: 36px;
+}
+.skills-groups .skills-grid { margin-top: 0; }
+.skills-group-title {
+  font-size: 0.7rem; letter-spacing: 0.18em;
+  text-transform: uppercase; color: var(--accent);
+  margin-bottom: 12px;
+}
+.skill-tag--developing {
+  border-style: dashed;
+  border-color: rgba(0,229,255,0.35);
+}
 
 /* CERTIFICATES */
 #certificates { background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
