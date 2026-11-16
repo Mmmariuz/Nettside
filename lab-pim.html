@@ -188,7 +188,8 @@ I only added the security mailbox to the alert notifications and not to every em
 
       <!-- RESULT -->
       <h2>Result</h2>
-      <p>What worked in the end? Feel free to add a final screenshot.</p>
+      <p>The setup works as intended. The test user is a member of the group “PIM - Fabric Admins” and shows up under My roles → Eligible assignments with Fabric Administrator, where the membership is listed as Group. The user doesn’t have the role by default. To use it, they have to activate it in PIM, complete MFA, and enter a justification and a ticket number. 
+        After activation, the role is active for 4 hours and is then removed automatically. At the same time, a notification is sent to security@fjordtech.no, so the security team can see who activated the role and when.</p>
       <figure class="lab-figure">
         <img src="bilder/PIM4.png" alt="Final result">
         <figcaption>Caption</figcaption>
@@ -197,7 +198,11 @@ I only added the security mailbox to the alert notifications and not to every em
       <!-- LESSONS LEARNED -->
       <h2>Lessons Learned</h2>
       <div class="lab-note">
-        Remember to check the Assignment ends, that the date and time is correct. Also remeber to check the box for Entra roles can be assigned to the group. 
+Check the assignment dates carefully. The Azure portal uses the US date format (MM/DD/YYYY). My first assignment ended on the same day it started, not one month later as I intended. I only noticed this when I checked the end time under My roles. Now I always verify the end date there after creating an assignment.
+Enable “Microsoft Entra roles can be assigned to the group” when creating the group. This setting can’t be turned on later. If you forget it, the group can’t be used for role assignments and you have to create a new one.
+The default PIM settings are not secure enough. By default, permanent eligible and active assignments are allowed, which makes it possible to bypass PIM completely. The role settings should always be reviewed and tightened.
+More notifications isn’t always better. At first I added the security mailbox to every notification type. That would create a lot of noise, and important alerts would be easier to miss. I limited it to the alert notifications only.
+Use consistent naming. I ended up with slightly different group names in my screenshots. A fixed naming convention, such as “PIM - <Role>“, makes groups easier to find and audit.
       </div>
 
     </article>
