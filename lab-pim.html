@@ -120,7 +120,13 @@ Time-limiting access like this keeps admin rights from piling up over time and f
         <div class="lab-step-number">04</div>
         <div class="lab-step-body">
           <h3>Edite role setting - Fabric admin - Activation</h3>
-          <p></p>
+          <p>In this step I edited the PIM role settings for Fabric Administrator to control what happens when someone activates the role.
+
+Activation maximum duration: 4 hours. The role is removed automatically after 4 hours, so admin rights don’t stay active longer than needed. A user who needs the role again has to activate it again.
+Azure MFA on activation. The user has to verify their identity with multi-factor authentication before the role is activated.
+Justification and ticket information. The user has to explain why they need the role and enter a ticket number. This links every activation to a specific task or service request and makes auditing easier.
+
+I didn’t enable approval, because Fabric Administrator is not a Tier 0 role like Global Administrator. MFA, a time limit and a required ticket give a good balance between security and day-to-day usability.</p>
 
  <p>
  </p>
@@ -136,7 +142,13 @@ Time-limiting access like this keeps admin rights from piling up over time and f
         <div class="lab-step-number">05</div>
         <div class="lab-step-body">
           <h3>Edite role setting - Fabric admin - Assignment</h3>
-          <p></p>
+          <p>In this step I changed the default assignment settings so the role can’t be given out permanently.
+
+No permanent eligible assignments. Eligible assignments expire after 1 year. After that, access has to be reviewed and renewed, so old access doesn’t stay around.
+No permanent active assignments. Active assignments, where a user has the role without activating it, expire after 1 month. They should only be used as an exception, for example for a short project.
+MFA and justification on active assignment. An administrator who gives someone an active assignment must use MFA and explain why. This makes it harder for a compromised admin account to hand out the role without anyone noticing.
+
+The default settings allow permanent assignments, which would make it possible to bypass PIM completely. Changing them makes sure all access to the role is time-limited and traceable.</p>
 
  <p>
  </p>
@@ -153,7 +165,14 @@ Time-limiting access like this keeps admin rights from piling up over time and f
         <div class="lab-step-number">06</div>
         <div class="lab-step-body">
           <h3>Edite role setting - Fabric admin - Notification</h3>
-          <p></p>
+          <p>In this step I set up email notifications so the security team can see every change to the role. I added the shared mailbox security@fjordtech.no as an additional recipient for three events:
+
+When someone is made eligible for the role
+When someone is given an active assignment
+When an eligible member activates the role
+
+The default recipients (admins, the user and approvers) still get their notifications, and “Critical emails only” is turned off so no alerts are filtered out. 
+I only added the security mailbox to the alert notifications and not to every email type, to keep the noise down. This way the security team always knows who has access to the role and when it’s used, which makes it easier to spot misuse early.</p>
 
  <p>
  </p>
