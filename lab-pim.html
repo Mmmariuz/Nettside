@@ -83,7 +83,13 @@ That way nobody has permanent admin rights. Users activate the role only when th
         <div class="lab-step-number">02</div>
         <div class="lab-step-body">
           <h3>Add the role to the group</h3>
-          <p>Describe what you did in this step.</p>
+          <p>Assigning the Fabric Administrator role to the group with PIM</p>
+
+<p>In this step I opened Privileged Identity Management (PIM) for Microsoft Entra roles and added a new assignment for the Fabric Administrator role. 
+The scope is set to Directory, so the role applies to the whole tenant. As the member, I picked the role-assignable group “PIM - Fabric Admins” that I created in the previous step, not individual users.
+
+Assigning the role to a group instead of to individual users makes access easier to manage. Anyone who should have Fabric admin rights is simply added to the group, and removing them from the group removes the role. 
+Because the assignment goes through PIM, it can be set to eligible and time-limited in the next tab (Setting), so no one has permanent admin access. This supports least privilege and gives a clear audit trail.</p>
           <figure class="lab-figure">
             <img src="bilder/PIM2.png" alt="Description of the image">
             <figcaption>Caption</figcaption>
@@ -96,7 +102,12 @@ That way nobody has permanent admin rights. Users activate the role only when th
         <div class="lab-step-number">03</div>
         <div class="lab-step-body">
           <h3>Set Assignment type and time </h3>
-          <p>Describe what you did in this step.</p>
+          <p>Configuring the assignment as eligible and time-limited</p>
+
+ <p>In this step I set the assignment type to Eligible instead of Active. This means the members of “PIM - Fabric Admins” do not have the Fabric Administrator role by default. Each member has to activate it in PIM when they need it, and the activation only lasts for a limited time.
+
+I also left “Permanently eligible” unchecked, so the eligibility itself has an end date. The assignment starts on 11 November 2026 and expires on 11 December 2026. After that, the group loses access to the role unless the assignment is renewed. 
+Time-limiting access like this keeps admin rights from piling up over time and follows the principle of least privilege and Just-In-Time access.</p>
           <figure class="lab-figure">
             <img src="bilder/PIM3.1.png" alt="Description of the image">
             <figcaption>Caption</figcaption>
