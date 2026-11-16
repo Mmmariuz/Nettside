@@ -66,10 +66,14 @@
         <div class="lab-step-number">01</div>
         <div class="lab-step-body">
           <h3>Make a PIM group</h3>
-          <p>Describe what you did in this step.</p>
+          <p>Creating a role-assignable security group for PIM
+In this step I created a new security group in Microsoft Entra ID called “PIM - Fabric Admin”. It will be used to give users the Fabric Administrator role through Privileged Identity Management (PIM).
+I turned on “Microsoft Entra roles can be assigned to the group” so the group is role-assignable. This setting can only be chosen when the group is created, and it automatically sets the membership type to Assigned, because dynamic groups can’t hold Entra roles.
+I didn’t add any owners, members or roles here on purpose. The Fabric Administrator role will be assigned to the group through PIM, and users will be added as eligible members. 
+That way nobody has permanent admin rights. Users activate the role only when they need it, for a limited time and with a justification. This follows least privilege and gives a clear audit trail of who had admin access and when.</p>
           <figure class="lab-figure">
             <img src="bilder/PIM1.png" alt="Description of the image">
-            <figcaption>Caption: what does the screenshot show?</figcaption>
+            <figcaption>Caption: Making of a new group in Entra ID</figcaption>
           </figure>
         </div>
       </div>
